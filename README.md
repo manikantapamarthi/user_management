@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run the application 
 
-Things you may want to cover:
 
-* Ruby version
+``git clone``
 
-* System dependencies
+run the command ```rails bundle```
 
-* Configuration
 
-* Database creation
+first create a database ```rails db:create```
 
-* Database initialization
+run the migrations ``` rails db:migrate```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+to add admin user run ``` rails db:seeds```
