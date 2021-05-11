@@ -1,0 +1,15 @@
+<table class="table">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Mobile Number</th>
+	</tr>
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= user.name %></td>
+			<td><%= user.email %></td>
+			<td><%= user&.phone_number %></td>
+			<td><%= link_to "Edit", edit_user_path(user) %></td>
+		</tr>
+	<% end %>
+</table>

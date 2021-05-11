@@ -1,0 +1,21 @@
+<div class="container">
+	<%= flash[:notice] %>
+	<h1><%= @user.name %></h1>
+
+	<div><%= image_tag @user.avatar, height: '50px', width: '50px' if @user.avatar.present? %></div>
+
+	<p><%= @user.email %></p>
+
+	<p><%= @user.phone_number %></p>
+
+	<% address =  @user&.address %>
+
+	<p><%= address&.address_line %></p>
+	<p><%= address&.street %></p>
+	<p><%= address&.city %></p>
+	<p><%= address&.state %></p>
+	<p><%= address&.pincode %></p>
+
+	<%= link_to "Edit", edit_user_path(@user) %>
+	<%= link_to "Users", users_path if @user.admin? %>
+</div>
